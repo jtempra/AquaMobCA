@@ -3,21 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.API", "AquaMobCA.API\AquaMobCA.API.csproj", "{DD825D96-351F-410B-A555-8A88FDD36E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AquaMobCA.API", "AquaMobCA.API\AquaMobCA.API.csproj", "{DD825D96-351F-410B-A555-8A88FDD36E90}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FADA561A-B170-4254-AD6C-65662150F0AC} = {FADA561A-B170-4254-AD6C-65662150F0AC}
+		{B10748C6-9C54-46EE-B479-5241D2AB1933} = {B10748C6-9C54-46EE-B479-5241D2AB1933}
+		{9C1A80FE-74FF-4044-9EC7-C97E28A47925} = {9C1A80FE-74FF-4044-9EC7-C97E28A47925}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Domain", "AquaMobCA.Domain\AquaMobCA.Domain.csproj", "{E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AquaMobCA.Domain", "AquaMobCA.Domain\AquaMobCA.Domain.csproj", "{E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Application", "AquaMobCA.Application\AquaMobCA.Application.csproj", "{9C1A80FE-74FF-4044-9EC7-C97E28A47925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AquaMobCA.Application", "AquaMobCA.Application\AquaMobCA.Application.csproj", "{9C1A80FE-74FF-4044-9EC7-C97E28A47925}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276} = {E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Infraestructure.Data", "AquaMobCA.Infraestructure.Data\AquaMobCA.Infraestructure.Data.csproj", "{B10748C6-9C54-46EE-B479-5241D2AB1933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AquaMobCA.Infraestructure.Data", "AquaMobCA.Infraestructure.Data\AquaMobCA.Infraestructure.Data.csproj", "{B10748C6-9C54-46EE-B479-5241D2AB1933}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276} = {E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Infraestructure.IoC", "AquaMobCA.Infraestructure.IoC\AquaMobCA.Infraestructure.IoC.csproj", "{FADA561A-B170-4254-AD6C-65662150F0AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AquaMobCA.Infraestructure.IoC", "AquaMobCA.Infraestructure.IoC\AquaMobCA.Infraestructure.IoC.csproj", "{FADA561A-B170-4254-AD6C-65662150F0AC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B10748C6-9C54-46EE-B479-5241D2AB1933} = {B10748C6-9C54-46EE-B479-5241D2AB1933}
+		{9C1A80FE-74FF-4044-9EC7-C97E28A47925} = {9C1A80FE-74FF-4044-9EC7-C97E28A47925}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Mobil.Android", "AquaMobCA.Mobil\AquaMobCA.Mobil.Android\AquaMobCA.Mobil.Android.csproj", "{DDDC4531-2E5E-4982-B741-F70CEAE38991}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Mobil.iOS", "AquaMobCA.Mobil\AquaMobCA.Mobil.iOS\AquaMobCA.Mobil.iOS.csproj", "{147162CE-CA7B-4F29-BD69-956F2E68FB6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaMobCA.Mobil", "AquaMobCA.Mobil\AquaMobCA.Mobil\AquaMobCA.Mobil.csproj", "{8674A5D7-FA1E-42A6-976F-9FA1893DEAD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AquaMobCA.Mobil", "AquaMobCA.Mobil\AquaMobCA.Mobil\AquaMobCA.Mobil.csproj", "{8674A5D7-FA1E-42A6-976F-9FA1893DEAD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
