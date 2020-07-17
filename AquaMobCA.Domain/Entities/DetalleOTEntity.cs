@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AquaMobCA.Domain.Entities
 {
-    public class DetalleOTEntity
+    public class DetalleOTEntity : BaseEntity
     {
     }
 }
