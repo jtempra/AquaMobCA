@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AquaMobCA.Domain.Settings
+﻿namespace Domain.Settings
 {
     class EMailSettings
     {

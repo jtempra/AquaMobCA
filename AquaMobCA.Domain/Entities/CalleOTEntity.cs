@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace AquaMobCA.Domain.Entities
+namespace Domain.Entities
 {
     public class CalleOTEntity: BaseEntity
     {

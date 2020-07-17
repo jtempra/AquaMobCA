@@ -127,10 +127,4 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\AquaMobCA.Mobil\AquaMobCA.Mobil.csproj">
-      <Project>{A7A765F2-4693-4214-AAB1-EE9C36C8B3CB}</Project>
-      <Name>AquaMobCA.Mobil</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

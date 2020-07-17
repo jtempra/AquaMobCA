@@ -23,7 +23,7 @@ namespace AquaMobCA.Mobil.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new global::Mobil.App());
 
             return base.FinishedLaunching(app, options);
         }

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-using AquaMob.Core.Enumerations;
+﻿using System.Collections.Generic;
+using Domain.Enumerations;
 
-namespace AquaMobCA.Domain.Entities
+namespace Domain.Entities
 {
     public class UserEntity :BaseEntity
     {

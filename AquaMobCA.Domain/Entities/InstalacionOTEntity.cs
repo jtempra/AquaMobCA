@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AquaMobCA.Domain.Entities
+﻿namespace Domain.Entities
 {
-    public class InstalacionOTEntity : BaseEntity: BaseEntity
+    public class InstalacionOTEntity : BaseEntity
     {
     }
 }
