@@ -1,7 +1,5 @@
-﻿using System.Reflection;
-using Domain.Entities;
+﻿using Domain.Entities;
 using Infraestructure.Persistence.Configurations;
-using Infraestructure.Persistence.DataSeed;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructure.Persistence.DataContext
@@ -62,9 +60,6 @@ namespace Infraestructure.Persistence.DataContext
 
             //modelBuilder.ApplyConfigurationsFromAssembly(typeof(AnotacionOTConfiguration).Assembly);
 
-            // omplim la DB de dades
-
-            modelBuilder.Seed();
 
         }
     }
