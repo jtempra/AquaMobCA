@@ -9,7 +9,10 @@ namespace Infraestructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<TipoIncidenciaEntity> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(e => e.Id);
+            builder.Property(e => e.Codigo).IsRequired().HasMaxLength(10);
+            builder.Property(e => e.Tipo).IsRequired().HasMaxLength(100);
+            builder.Property(e => e.Observaciones).HasMaxLength(250);
         }
     }
 }

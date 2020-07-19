@@ -9,7 +9,8 @@ namespace Infraestructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<FotoEntity> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(e => e.Id);
+            builder.Property(e => e.RutaFoto).IsRequired().HasMaxLength(250);
         }
     }
 }

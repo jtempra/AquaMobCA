@@ -9,7 +9,10 @@ namespace Infraestructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<HistoricoLecturasEntity> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(e => e.Id);
+            builder.Property(e => e.NumeroContrato).IsRequired();
+            builder.Property(e => e.Periodo).IsRequired();
+            builder.Property(e => e.FechaLectura).IsRequired();
         }
     }
 }

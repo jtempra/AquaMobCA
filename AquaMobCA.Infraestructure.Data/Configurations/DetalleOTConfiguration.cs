@@ -9,7 +9,9 @@ namespace Infraestructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<DetalleOTEntity> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(e => e.Id);
+            builder.Property(e => e.Cantidad).IsRequired();
+            builder.Property(e => e.Fecha).IsRequired();
         }
     }
 }
