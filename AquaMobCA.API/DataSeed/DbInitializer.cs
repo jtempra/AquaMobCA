@@ -21,7 +21,8 @@ namespace API.DataSeed
             }
 
 
-            var Usuario = new UserEntity()
+
+            context.Usuarios.Add(new UserEntity()
             {
                 NIF = "11223344A",
                 Nombre = "Josep",
@@ -37,9 +38,41 @@ namespace API.DataSeed
                 Incidencias = new List<IncidenciaEntity>(),
                 OrdenesTrabajoCreadas = new List<OTEntity>(),
                 OrdenesTrabajoGestionadas = new List<OTEntity>()
-            };
-
-            context.Usuarios.Add(Usuario);
+            });
+            context.Usuarios.Add(new UserEntity()
+            {
+                NIF = "55667788B",
+                Nombre = "Ahmed",
+                Apellidos = "Al Azred",
+                Direccion = "Carrer Allah, 3-2-1",
+                Movil = "600112233",
+                Email = "aaa@aljazira.com",
+                PathFoto = "c:\\fotos\\aaa.jpg",
+                Rol = TipoUsuario.Lector,
+                UserName = "Ahmed",
+                Password = "123456",
+                Lecturas = new List<LecturaEntity>(),
+                Incidencias = new List<IncidenciaEntity>(),
+                OrdenesTrabajoCreadas = new List<OTEntity>(),
+                OrdenesTrabajoGestionadas = new List<OTEntity>()
+            });
+            context.Usuarios.Add(new UserEntity()
+            {
+                NIF = "99009900X",
+                Nombre = "Joan",
+                Apellidos = "Manges",
+                Direccion = "Carrer de la frontera, 124",
+                Movil = "600234532",
+                Email = "jm@gmail.com",
+                PathFoto = "c:\\fotos\\jm.jpg",
+                Rol = TipoUsuario.Operario,
+                UserName = "jmanges",
+                Password = "123456",
+                Lecturas = new List<LecturaEntity>(),
+                Incidencias = new List<IncidenciaEntity>(),
+                OrdenesTrabajoCreadas = new List<OTEntity>(),
+                OrdenesTrabajoGestionadas = new List<OTEntity>()
+            });
             context.SaveChanges();
 
         }

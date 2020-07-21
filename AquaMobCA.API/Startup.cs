@@ -1,4 +1,6 @@
+using System.Reflection;
 using Infraestructure.Persistence;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +23,7 @@ namespace AquaMobCA.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddPersistenceInfraestructure(_config);
+            services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddControllers();
         }
 
