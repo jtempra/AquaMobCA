@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Application.Interfaces;
+using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Interfaces;
 using Domain.Entities;
 using Domain.Enumerations;
-using MediatR;
 
-namespace API.Features.UserFeatures.Commands
+namespace Application.Features.UserFeatures.Commands
 {
     public class CreateUserCommand : IRequest<int>
     {

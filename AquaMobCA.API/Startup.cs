@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using API;
+using Application;
 
 namespace AquaMobCA.API
 {
@@ -24,11 +25,13 @@ namespace AquaMobCA.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMediatR();
+
+            services.AddValidations();
+
             services.AddPersistenceInfraestructure(_config);
 
             services.AddSwagger();
-
-            services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddControllers();
 

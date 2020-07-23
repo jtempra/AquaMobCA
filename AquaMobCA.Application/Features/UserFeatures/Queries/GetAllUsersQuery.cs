@@ -7,7 +7,7 @@ using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
 
-namespace API.Features.UserFeatures.Queries
+namespace Application.Features.UserFeatures.Queries
 {
     public class GetAllUsersQuery : IRequest<IEnumerable<UserEntity>>
     {

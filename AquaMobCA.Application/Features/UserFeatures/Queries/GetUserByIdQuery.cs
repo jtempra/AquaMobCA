@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Application.Interfaces;
+using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Interfaces;
 using Domain.Entities;
-using MediatR;
 
-namespace API.Features.UserFeatures.Queries
+namespace Application.Features.UserFeatures.Queries
 {
-    public class GetUserByIdQuery:IRequest<UserEntity>
+    public class GetUserByIdQuery : IRequest<UserEntity>
     {
         public int Id { get; set; }
         public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserEntity>

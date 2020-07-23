@@ -7,7 +7,7 @@ using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
 
-namespace API.Features.UserFeatures.Commands
+namespace Application.Features.UserFeatures.Commands
 {
     public class DeleteUserByIdCommand : IRequest<int>
     {

@@ -8,7 +8,7 @@ using Domain.Entities;
 using Domain.Enumerations;
 using MediatR;
 
-namespace API.Features.UserFeatures.Commands
+namespace Application.Features.UserFeatures.Commands
 {
     public class UpdateUserCommand : IRequest<int>
     {
