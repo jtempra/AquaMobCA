@@ -28,6 +28,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D7946E52-4910-479A-AEE7-E61BBF0F108C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.Identity", "Infraestructure.Identity\Infraestructure.Identity.csproj", "{659A1CC9-30E5-4289-A491-691F3C8B7C25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276} = {E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276}
+		{9C1A80FE-74FF-4044-9EC7-C97E28A47925} = {9C1A80FE-74FF-4044-9EC7-C97E28A47925}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.Shared", "Infraestructure.Shared\Infraestructure.Shared.csproj", "{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9C1A80FE-74FF-4044-9EC7-C97E28A47925} = {9C1A80FE-74FF-4044-9EC7-C97E28A47925}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +97,30 @@ Global
 		{B10748C6-9C54-46EE-B479-5241D2AB1933}.Release|iPhone.Build.0 = Release|Any CPU
 		{B10748C6-9C54-46EE-B479-5241D2AB1933}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{B10748C6-9C54-46EE-B479-5241D2AB1933}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Release|iPhone.Build.0 = Release|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Release|iPhone.Build.0 = Release|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +130,8 @@ Global
 		{E72ED9DF-7A3F-4BF7-A706-CCFFF26A4276} = {167BADEC-963F-4638-B09D-2D6F59384E63}
 		{9C1A80FE-74FF-4044-9EC7-C97E28A47925} = {167BADEC-963F-4638-B09D-2D6F59384E63}
 		{B10748C6-9C54-46EE-B479-5241D2AB1933} = {A77443CE-059C-494F-B807-6164560F8085}
+		{659A1CC9-30E5-4289-A491-691F3C8B7C25} = {A77443CE-059C-494F-B807-6164560F8085}
+		{1FE79BC8-347A-45E3-B25B-2AAF4CE3C153} = {A77443CE-059C-494F-B807-6164560F8085}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {604C098A-C43D-4809-8166-4F8DE21BBA49}

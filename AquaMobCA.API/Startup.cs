@@ -9,6 +9,8 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using API;
 using Application;
+using Infraestructure.Identity;
+using Infraestructure.Shared;
 
 namespace AquaMobCA.API
 {
@@ -29,7 +31,11 @@ namespace AquaMobCA.API
 
             services.AddValidations();
 
+            services.AddIdentityInfraestructure(_config);
+
             services.AddPersistenceInfraestructure(_config);
+
+            services.AddSharedInfraestructure(_config);
 
             services.AddSwagger();
 

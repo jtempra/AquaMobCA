@@ -1,6 +1,8 @@
 ﻿using Domain.Entities;
 using Infraestructure.Persistence.Configurations;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace Infraestructure.Persistence.DataContext
 {
