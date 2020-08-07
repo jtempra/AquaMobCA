@@ -20,7 +20,19 @@ namespace API
                     Title = "API- AquaMobCA",
                     Description = "Api aplicació Mòbil control lectures-incidencies-OT"
                 });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    Description = "Input your Bearer token to access this API",
+                });
             });
         }
+
+
     }
 }

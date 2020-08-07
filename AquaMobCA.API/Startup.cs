@@ -1,16 +1,16 @@
+using API;
+using API.Middlewares;
+using Application;
+using AutoMapper;
+using Infraestructure.Identity;
 using Infraestructure.Persistence;
+using Infraestructure.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using System.Reflection;
-using API;
-using Application;
-using Infraestructure.Identity;
-using Infraestructure.Shared;
 
 namespace AquaMobCA.API
 {
@@ -28,6 +28,8 @@ namespace AquaMobCA.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMediatR();
+
+            services.AddAutoMapper();
 
             services.AddValidations();
 
@@ -61,11 +63,14 @@ namespace AquaMobCA.API
             app.UseAuthorization();
 
             app.UseSwagger();
+
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API");
                 //c.RoutePrefix = string.Empty;
             });
+
+            app.UseMiddleware<ErrorHandlerMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
