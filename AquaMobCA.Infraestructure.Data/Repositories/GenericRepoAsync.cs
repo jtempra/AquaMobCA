@@ -64,5 +64,17 @@ namespace Infraestructure.Persistence.Repositories
         {
             return await _dbContext.Set<T>().Where(expression).ToListAsync();
         }
+
+
+        public async Task<IReadOnlyList<T>> FindPagedReponseAsync(Expression<Func<T, bool>> expression, int pageNumber, int pageSize)
+        {
+            return await _dbContext
+                .Set<T>()
+                .Where(expression)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .AsNoTracking()
+                .ToListAsync();
+        }
     }
 }

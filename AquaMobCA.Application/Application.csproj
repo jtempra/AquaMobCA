@@ -20,4 +20,44 @@
     <ProjectReference Include="..\AquaMobCA.Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\CalleOTFeatures\Commands\" />
+    <Folder Include="Features\CalleOTFeatures\Queries\" />
+    <Folder Include="Features\ConceptoOTFeatures\Commands\" />
+    <Folder Include="Features\ConceptoOTFeatures\Queries\" />
+    <Folder Include="Features\DetalleOTFeatures\Commands\" />
+    <Folder Include="Features\DetalleOTFeatures\Queries\" />
+    <Folder Include="Features\EquipoOTFeatures\Commands\" />
+    <Folder Include="Features\EquipoOTFeatures\Queries\" />
+    <Folder Include="Features\FotoFeatures\Commands\" />
+    <Folder Include="Features\FotoFeatures\Queries\" />
+    <Folder Include="Features\HistoricoLecturasFeatures\Commands\" />
+    <Folder Include="Features\HistoricoLecturasFeatures\Queries\" />
+    <Folder Include="Features\IncidenciaFeatures\Commands\" />
+    <Folder Include="Features\IncidenciaFeatures\Queries\" />
+    <Folder Include="Features\InfoAdicionalOTFeatures\Commands\" />
+    <Folder Include="Features\InfoAdicionalOTFeatures\Queries\" />
+    <Folder Include="Features\InstalacionOTFeatures\Commands\" />
+    <Folder Include="Features\InstalacionOTFeatures\Queries\" />
+    <Folder Include="Features\LecturaFeatures\Commands\" />
+    <Folder Include="Features\LecturaFeatures\Queries\" />
+    <Folder Include="Features\OTFeatures\Commands\" />
+    <Folder Include="Features\OTFeatures\Queries\" />
+    <Folder Include="Features\PoblacionOTFeatures\Commands\" />
+    <Folder Include="Features\PoblacionOTFeatures\Queries\" />
+    <Folder Include="Features\RutaLecturaFeatures\Commands\" />
+    <Folder Include="Features\RutaLecturaFeatures\Queries\" />
+    <Folder Include="Features\SubinstalacionOTFeatures\Commands\" />
+    <Folder Include="Features\SubinstalacionOTFeatures\Queries\" />
+    <Folder Include="Features\TipoIncidenciaFeatures\Commands\" />
+    <Folder Include="Features\TipoIncidenciaFeatures\Queries\" />
+    <Folder Include="Features\TipoIncidenciaLecturaFeatures\Commands\" />
+    <Folder Include="Features\TipoIncidenciaLecturaFeatures\Queries\" />
+    <Folder Include="Features\TipoOrigenIncidenciaFeatures\Commands\" />
+    <Folder Include="Features\TipoOrigenIncidenciaFeatures\Queries\" />
+    <Folder Include="Features\TipoOTFeatures\Commands\" />
+    <Folder Include="Features\TipoOTFeatures\Queries\" />
+    <Folder Include="Features\ZonaOTFeatures\" />
+  </ItemGroup>
+
 </Project>

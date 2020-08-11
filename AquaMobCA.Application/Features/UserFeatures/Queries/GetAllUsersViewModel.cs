@@ -5,7 +5,7 @@ using Domain.Enumerations;
 
 namespace Application.Features.UserFeatures.Queries
 {
-    class GetAllUsersViewModel
+    public class GetAllUsersViewModel
     {
         public int Id { get; set; }
         public string NIF { get; set; }

@@ -4,29 +4,38 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Interfaces;
+using Application.Wrappers;
+using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.UserFeatures.Queries
 {
-    public class GetAllUsersQuery : IRequest<IEnumerable<UserEntity>>
+    public class GetAllUsersQuery : IRequest<PagedResponse<IEnumerable<GetAllUsersViewModel>>>
     {
-        public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, IEnumerable<UserEntity>>
+
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
+    }
+
+    public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, PagedResponse<IEnumerable<GetAllUsersViewModel>>>
+        
+    {
+        private readonly IGenericRepoAsync<UserEntity> _repo;
+        private readonly IMapper _mapper;
+        public GetAllUsersQueryHandler(IGenericRepoAsync<UserEntity> repo, IMapper mapper)
         {
-            private readonly IGenericRepoAsync<UserEntity> _repo;
-            public GetAllUsersQueryHandler(IGenericRepoAsync<UserEntity> repo)
-            {
-                _repo = repo;
-            }
-            public async Task<IEnumerable<UserEntity>> Handle(GetAllUsersQuery query, CancellationToken cancellationToken)
-            {
-                var userList = await _repo.GetAllAsync();
-                if (userList == null)
-                {
-                    return null;
-                }
-                return userList;
-            }
+            _repo = repo;
+            _mapper = mapper;
+        }    
+        public async Task<PagedResponse<IEnumerable<GetAllUsersViewModel>>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
+        {
+            var validFilter = _mapper.Map<GetAllUsersParameter>(request);
+            var user = await _repo.GetPagedReponseAsync(validFilter.PageNumber, validFilter.PageSize);
+            var userViewModel = _mapper.Map<IEnumerable<GetAllUsersViewModel>>(user);
+            
+            return new PagedResponse<IEnumerable<GetAllUsersViewModel>>(userViewModel,validFilter.PageNumber,validFilter.PageSize);
         }
+        
     }
 }
